@@ -1,0 +1,67 @@
+@import './styles/vars';
+@import './styles/index';
+@import './styles/header';
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:  #2B2B2B;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+}
+
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+// @media (max-width: 1024px) {
+//     .container {
+//         max-width: 864px;
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     .container {
+//         max-width: 608px;
+//     }
+// }
+
+// @media (max-width: 600px) {
+//     .container {
+//         max-width: 400px;
+//     }
+// }
+
+// @media (max-width: 425px) {
+//     .container {
+//         max-width: 311px;
+//     }
+// }
