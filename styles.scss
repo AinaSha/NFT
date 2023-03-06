@@ -44,6 +44,38 @@ button {
 }
 
 
+.section-title {
+  font-size: 2.375rem;
+  font-weight: 600;
+}
+
+.section-desciption {
+  font-size: 1.375rem;
+}
+
+.card-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+
+  .avatar-img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+}
+
+
 
 
 
