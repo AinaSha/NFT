@@ -1,5 +1,170 @@
 @import './vars';
 
+.topscreen  {
+  &__wrapper {
+    display: flex;
+    align-self: center;
+    column-gap: 30px;
+    width: 89%;
+    margin: 80px auto;
+  }
+
+  &__descr {
+    width: 43.22%;
+  }
+
+  &__title {
+    font-size: 4.19rem;
+    font-weight: 600;
+    line-height: 110%;
+  }
+
+  &__text {
+    font-size: 1.375rem;
+    margin: 20px 0 30px 0;
+    line-height: 160%;
+  }
+
+  &__descr-gif {
+    display: none;
+  }
+
+  &__gif {
+    width: 43.22%;
+    // max-width: 510px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+
+  &__btn {
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: $violet;
+    border-radius: 20px;
+    border-style: none;
+    padding: 19px 50px;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 12px;
+    }
+  }
+
+  .digit-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    
+    &__digit {
+     font-family: $digit-font;
+     font-weight: 700;
+     font-size: 1.75rem;
+    }
+
+    &__name {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .topscreen  {
+    &__wrapper {
+      column-gap: 40px;
+    }
+  
+    &__title {
+      font-size: 2.375rem;
+      line-height: 120%;
+    }
+
+    &__text {
+      font-size: 1rem;
+      margin: 20px 0;
+      line-height: 140%;
+    }
+
+    .digit-info {
+      margin-top: 20px;
+      
+      &__digit {
+       font-size: 1.375rem;
+      }
+  
+      &__name {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .topscreen  {
+    position: relative;
+    &__wrapper {
+      display: block;
+      width: 100%;
+      margin: 40px auto;
+    }
+
+    &__descr {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    &__text {
+      margin: 40px 0 40px 0;
+    }
+
+    &__descr-gif {
+      display: block;
+      width: 96%;
+      margin-bottom: 40px;
+      
+      img {
+        width: 100%;
+      }
+    }
+
+    &__gif {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .topscreen  {
+    &__descr {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &__descr-gif {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    &__gif {
+      display: none;
+    }
+
+    &__btn {
+      margin: 0 auto;
+    }
+  }
+
+}
+
+
+
 // .hero {
 //   &__wrapper {
 //     width: 66%;

@@ -2,8 +2,6 @@
 @import './styles/index';
 @import './styles/header';
 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
-
 *,
 *::before,
 *::after {
@@ -16,6 +14,9 @@ body {
   background-color:  #2B2B2B;
   font-family: 'Work Sans', sans-serif;
   font-size: 16px;
+  font-weight: 400;
+  color: $white;
+  text-transform: capitalize;
 }
 
 
@@ -39,20 +40,18 @@ a {
 
 button {
   cursor: pointer;
+  color: $white;
 }
 
 
-// @media (max-width: 1024px) {
-//     .container {
-//         max-width: 864px;
-//     }
-// }
 
-// @media (max-width: 768px) {
-//     .container {
-//         max-width: 608px;
-//     }
-// }
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+}
 
 // @media (max-width: 600px) {
 //     .container {
