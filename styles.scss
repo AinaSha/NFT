@@ -47,10 +47,30 @@ button {
 .section-title {
   font-size: 2.375rem;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .section-desciption {
   font-size: 1.375rem;
+}
+
+.section-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 140%;
+  background-color: transparent;
+  outline: 2px solid #A259FF;
+  border-radius: 20px;
+  border-style: none;
+  padding: 19px 50px;
+  display: flex;
+  align-items: center;
+  width: 247px;
+  height: 60px;
+  
+  img {
+    margin-right: 12px;
+  }
 }
 
 .card-title {
@@ -75,13 +95,25 @@ button {
   }
 }
 
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
 
-
+  .section-desciption {
+    font-size: 1rem;
+  }
+}
 
 
 @media (max-width: 768px) {
     .container {
         padding: 0 30px;
+    }
+
+    .section-title,
+    .section-desciption {
+      text-align: center;
     }
 }
 
