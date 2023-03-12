@@ -81,6 +81,7 @@ button {
 .card-title {
   font-size: 1.375rem;
   font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .user-profile {
@@ -99,6 +100,28 @@ button {
     }
   }
 }
+
+.user-info-block {
+  padding: 20px 30px 25px 30px;
+  background: $dark-grey;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.nft-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  
+  .price .price-title,
+  .bid .bid-title {
+    font-family: $digit-font;
+    font-size: 0.875rem;
+    color: $grey;
+    margin-bottom: 8px;
+  }
+}
+
 
 @media (max-width: 1024px) {
   .section-title {
