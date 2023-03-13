@@ -65,15 +65,43 @@
 
 @media (max-width: 1024px) {
   .footer {
-    width: 315px;
-    margin: 0 auto;
-
     .nav-block {
       display: block;
-      // width: 100%;
-      // justify-content: space-between;
-      // padding-bottom: 30px;
-      // border-bottom: 1px solid #858584;
+    }
+
+    .about-text,
+    &__call-to-action  {
+      width: 100%;
+    }
+
+    .explore {
+      margin: 30px 0;
     }
   } 
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .form {
+      display: block;
+      text-align: center;
+
+      .mail-form {
+        width: 100%;
+        padding: 12px 20px;
+        margin-bottom: 16px;
+      }
+
+      .mail-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        top: 0;
+        transform: translate(0px, 0px);
+        padding: 8px 0px;
+      } 
+    }
+  }
 }
