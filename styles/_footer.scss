@@ -62,3 +62,18 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    width: 315px;
+    margin: 0 auto;
+
+    .nav-block {
+      display: block;
+      // width: 100%;
+      // justify-content: space-between;
+      // padding-bottom: 30px;
+      // border-bottom: 1px solid #858584;
+    }
+  } 
+}

@@ -609,6 +609,7 @@
   background-image: url('../assets/img/NFT-Highlight.png');
   background-repeat: no-repeat;
   background-position:center center;
+  background-size: cover;
 
   &__inner {
    margin: 360px 0 60px 0;
@@ -654,6 +655,8 @@
 
   .deadline-time {
     display: flex;
+    justify-content: space-between;
+    width: 235px;
 
     &__item .digit,
     .divider {
@@ -663,13 +666,51 @@
     }
   }
 
+  .magic-btn2 {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .magic {
+    &__left h2 {
+      font-size: 2.375rem;
+      margin: 0px 0 30px 0;
+      line-height: 120%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .magic {
+    &__inner {
+      width: 315px;
+       margin: 120px auto 40px auto;
+    }
+    .magic-descr {
+      display: block;
+      
+    }
+
+    &__right {
+      margin-bottom: 30px;
+    }
+
+    .magic-btn{
+      display: none;
+    }
+
+    .magic-btn2 {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 
 // Instraction section
 
 .instruction {
-
   &__gallery {
     width: 100%;
     display: flex;
@@ -711,6 +752,54 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .instruction {
+    .description {
+      h3 {
+        font-size: 1rem;
+      }
+  
+      p {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .instruction {
+    &__gallery {
+      display: block;
+      width: 315px;
+      margin: 40px auto;
+    }
+
+    .card-item__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: fill;
+      }
+    }
+
+    .card-item + .card-item {
+      margin-top: 20px;
+    }
+
+    .card-item {
+      padding: 20px;
+    }
+
+    .description {
+      width: 155px;
+    }
+  }
+}
+
 //Call-to action section
 
 .call-to-action {
@@ -727,8 +816,8 @@
 
   .image-block {
     width: 45.7%;
-    // max-width: 425px;
-    // max-height: 310px ;
+    max-width: 425em;
+    max-height: 310em;
 
     img {
       width: 100%;
@@ -750,40 +839,50 @@
     }
   }
 
-  // .form {
-  //   display: flex;
-  //   position: relative;
-  //   .mail-form {
-  //     padding: 19px 20px;
-  //     background-color: $white;
-  //     border-radius: 20px;
-  //     border-style: none;
-  //   }
+  .form {
+    display: flex;
+    position: relative;
+    .mail-form {
+      padding: 19px 20px;
+      background-color: $white;
+      border-radius: 20px;
+      border-style: none;
+    }
 
-  //   .mail-btn {
-  //     display: flex;
-  //     align-items: center;
-  //     border-style: none;
-  //     background-color: $violet;
-  //     border-radius: 20px;
-  //     position: absolute;
-  //     top: 0;
-  //     padding: 17px 50px 17px 50px;
-  //     transform: translate(165px, 0px);
-  //     font-family: $text-font;
+    .mail-btn {
+      display: flex;
+      align-items: center;
+      border-style: none;
+      background-color: $violet;
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      padding: 17px 50px 17px 50px;
+      transform: translate(165px, 0px);
+      font-family: $text-font;
 
-  //     img {
-  //       margin-right: 12px;
-  //     }
-  //   }
-  // }
+      img {
+        margin-right: 12px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1024px) {
   .call-to-action {
+    &__inner {
+      justify-content: center;
+      column-gap: 30px;
+      padding: 30px;
+    }
+  
+    .image-block {
+      width: 315px;
+      height: 280px;
+    }
 
     &__descr {
-
+     
       h3 {
         font-size: 1.75rem;
         line-height: 140%;
@@ -798,6 +897,7 @@
 
     .form {
       display: block;
+      text-align: center;
 
       .mail-form {
         width: 100%;
@@ -806,14 +906,32 @@
       }
 
       .mail-btn {
-        // display: block;
-        // margin: 0 auto;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        position: static;
+        position: relative;
         top: 0;
         transform: translate(0px, 0px);
-        padding: 8px 110px;
+        padding: 8px 0px;
       } 
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .call-to-action {
+    &__inner {
+      display: block;
+      width: 315px;
+      margin: 0 auto;
+      background-color: transparent;
+      padding: 0px;
+    }
+
+    &__descr {
+      margin-top: 30px;
+      width: 100%;
     }
   }
 }
