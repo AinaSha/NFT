@@ -1,6 +1,7 @@
 @import './styles/vars';
 @import './styles/index';
 @import './styles/header';
+@import './styles/footer';
 
 *,
 *::before,
@@ -18,7 +19,6 @@ body {
   color: $white;
   text-transform: capitalize;
 }
-
 
 .container {
   max-width: 1280px;
@@ -122,6 +122,33 @@ button {
   }
 }
 
+.form {
+  display: flex;
+  position: relative;
+  .mail-form {
+    padding: 19px 20px;
+    background-color: $white;
+    border-radius: 20px;
+    border-style: none;
+  }
+
+  .mail-btn {
+    display: flex;
+    align-items: center;
+    border-style: none;
+    background-color: $violet;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    padding: 17px 50px 17px 50px;
+    transform: translate(165px, 0px);
+    font-family: $text-font;
+
+    img {
+      margin-right: 12px;
+    }
+  }
+}
 
 @media (max-width: 1024px) {
   .section-title {
@@ -138,20 +165,21 @@ button {
         padding: 0 30px;
     }
 
+    .section-wrapper {
+      width: 100%;
+      padding: 40px 0;
+    }
+
     .section-title,
     .section-desciption {
       text-align: center;
     }
 }
 
-// @media (max-width: 600px) {
-//     .container {
-//         max-width: 400px;
-//     }
-// }
+@media (max-width: 475px) {
+  .section-title,
+  .section-desciption {
+    text-align: left;
+  }
+}
 
-// @media (max-width: 425px) {
-//     .container {
-//         max-width: 311px;
-//     }
-// }

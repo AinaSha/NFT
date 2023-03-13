@@ -1,0 +1,64 @@
+@import './vars';
+
+.footer {
+  .nav-block {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #858584;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .explore h5,
+  &__call-to-action h5{
+    font-family: $digit-font;
+    font-size: 1.375rem;
+    margin-bottom: 25px;
+  }
+
+  .about-text,
+  &__menu a,
+  &__call-to-action p{
+    color: $light-grey;
+  }
+
+  .about-text {
+    width: 238px;
+
+    h6 {
+      margin: 20px 0 15px 0;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  
+  &__menu-item + &__menu-item {
+    margin-top: 20px;
+  }
+
+  &__call-to-action {
+    width: 40%;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .copyright {
+    margin-top: 30px;
+    P {
+      font-family: $text-font;
+      font-size: 0.75rem;
+      color: $light-grey;
+    }
+  }
+}
