@@ -1,6 +1,7 @@
 @import './styles/vars';
 @import './styles/index';
 @import './styles/header';
+@import './styles/footer';
 
 *,
 *::before,
@@ -18,7 +19,6 @@ body {
   color: $white;
   text-transform: capitalize;
 }
-
 
 .container {
   max-width: 1280px;
@@ -43,6 +43,11 @@ button {
   color: $white;
 }
 
+.section-wrapper {
+  width: 89%;
+    margin: 0px auto;
+    padding: 80px 0;
+}
 
 .section-title {
   font-size: 2.375rem;
@@ -76,6 +81,7 @@ button {
 .card-title {
   font-size: 1.375rem;
   font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .user-profile {
@@ -95,6 +101,55 @@ button {
   }
 }
 
+.user-info-block {
+  padding: 20px 30px 25px 30px;
+  background: $dark-grey;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.nft-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  
+  .price .price-title,
+  .bid .bid-title {
+    font-family: $digit-font;
+    font-size: 0.875rem;
+    color: $grey;
+    margin-bottom: 8px;
+  }
+}
+
+.form {
+  display: flex;
+  position: relative;
+  .mail-form {
+    padding: 19px 20px;
+    background-color: $white;
+    border-radius: 20px;
+    border-style: none;
+  }
+
+  .mail-btn {
+    display: flex;
+    align-items: center;
+    border-style: none;
+    background-color: $violet;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    padding: 17px 50px 17px 50px;
+    transform: translate(165px, 0px);
+    font-family: $text-font;
+
+    img {
+      margin-right: 12px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .section-title {
     font-size: 1.75rem;
@@ -105,10 +160,14 @@ button {
   }
 }
 
-
 @media (max-width: 768px) {
     .container {
         padding: 0 30px;
+    }
+
+    .section-wrapper {
+      width: 100%;
+      padding: 40px 0;
     }
 
     .section-title,
@@ -117,14 +176,10 @@ button {
     }
 }
 
-// @media (max-width: 600px) {
-//     .container {
-//         max-width: 400px;
-//     }
-// }
+@media (max-width: 475px) {
+  .section-title,
+  .section-desciption {
+    text-align: left;
+  }
+}
 
-// @media (max-width: 425px) {
-//     .container {
-//         max-width: 311px;
-//     }
-// }
