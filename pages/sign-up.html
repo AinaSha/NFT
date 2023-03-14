@@ -38,35 +38,96 @@
       </div>
     </div>
   </header> 
-  <main>
-    <div class="image-side">
-      <img src="../assets/img/account-image.png" alt="cosmos image">
-    </div>
-    <div class="account-form">
-      <div class="account-form__inner">
-        <h2>Create account</h2>
-        <p>Welcome! enter your details and start creating, collecting and selling NFTs.</p>
-        <form>
-          <div class="username">
-            <img src="../assets/icon/User-account.svg" alt="user icon">
-            <input type="text" placeholder="Username">
-          </div>
-          <div class="email">
-            <img src="../assets/icon/Envelope-account.svg" alt="envelope icon">
-            <input type="email"  placeholder="Email Address">
-          </div>
-          <div class="password">
-            <img src="../assets/icon/LockKey-account.svg" alt="lock key icon">
-            <input type="password" class="password" placeholder="Password">
-          </div>
-          <div class="confirm-password">
-            <img src="../assets/icon/LockKey-account.svg" alt="lock key icon">
-            <input type="password" class="confirm-password" placeholder="Confirm Password">
-          </div>
-          <button type="submit">Create account</button>
-        </form>
+  <main class="account">
+    <div class="account__inner">
+      <div class="image-side">
+        <img src="../assets/img/account-image.png" alt="cosmos image">
+      </div>
+      <div class="account-form">
+        <div class="account-form__inner">
+          <h2>Create account</h2>
+          <p>Welcome! enter your details and start creating, collecting and selling NFTs.</p>
+          <form>
+            <div class="username input-form">
+              <img src="../assets/icon/User-account.svg" alt="user icon">
+              <input type="text" placeholder="Username">
+            </div>
+            <div class="email input-form">
+              <img src="../assets/icon/Envelope-account.svg" alt="envelope icon">
+              <input type="email"  placeholder="Email Address">
+            </div>
+            <div class="password input-form">
+              <img src="../assets/icon/LockKey-account.svg" alt="lock key icon">
+              <input type="password" class="password" placeholder="Password">
+            </div>
+            <div class="confirm-password input-form">
+              <img src="../assets/icon/LockKey-account.svg" alt="lock key icon">
+              <input type="password" class="confirm-password" placeholder="Confirm Password">
+            </div>
+            <button type="submit">Create account</button>
+          </form>
+        </div>
       </div>
     </div>
   </main> 
+  <footer class="footer container">
+    <div class="section-wrapper">
+      <div class="footer__inner">
+       <div class="nav-block">
+        <div class="about-block">
+          <a href="#" class="footer__logo">
+            <img src="../assets/icon/logo.svg" alt="logotype">
+          </a>
+          <div class="about-text">
+            <p>NFT marketplace UI created with Anima for Figma.</p>
+            <h6>Join our community</h6>
+            <div class="footer__social-media">
+              <a href="#">
+                <img src="../assets/icon/DiscordLogo.svg" alt="discord logo">
+              </a>
+              <a href="#">
+                <img src="../assets/icon/youtubelogo.svg" alt="youtube logo">
+              </a>
+              <a href="#">
+                <img src="../assets/icon/twitter.svg" alt="twitter logo">
+              </a>
+              <a href="#">
+                <img src="../assets/icon/InstagramLogo.svg" alt="instagram logo">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="explore">
+          <h5>Explore</h5>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a href="">Marketplace</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="">Rankings</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="">Connect a wallet</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__call-to-action">
+          <h5>Join our weekly digest</h5>
+          <p>Get exclusive promotions & updates straight to your inbox.</p>
+          <div class="form">
+            <input class="mail-form" type="text" placeholder="Enter your email here">
+            <button class="mail-btn" type="submit">
+              <img src="../assets/icon/mail-icon.svg" alt="mail icon">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Ⓒ NFT Market. Use this template freely.</p>
+       </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
