@@ -2,6 +2,7 @@
 @import './styles/index';
 @import './styles/header';
 @import './styles/footer';
+@import './styles/sign-up';
 
 *,
 *::before,
@@ -161,19 +162,19 @@ button {
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 0 30px;
-    }
+  .container {
+      padding: 0 30px;
+  }
 
-    .section-wrapper {
-      width: 100%;
-      padding: 40px 0;
-    }
+  .section-wrapper {
+    width: 100%;
+    padding: 40px 0;
+  }
 
-    .section-title,
-    .section-desciption {
-      text-align: center;
-    }
+  .section-title,
+  .section-desciption {
+    text-align: center;
+  }
 }
 
 @media (max-width: 475px) {

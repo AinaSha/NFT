@@ -1,0 +1,128 @@
+@import './vars';
+
+.account {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .image-side {
+      width: 48%;
+      // height: 691px;
+
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+      }
+  }
+
+  .account-form {
+    width: 48%;
+
+    &__inner {
+      max-width: 460px;
+
+      h2 {
+        font-family: $text-font;
+        font-size: 3.188rem;
+      }
+
+      p {
+        font-family: $text-font;
+        font-size: 1.375rem;
+        margin: 20px 0 40px 0;
+      }
+    }
+
+    form {
+      max-width: 330px;
+    }
+
+    .input-form {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid #858584;
+      border-radius: 20px;
+   
+      padding: 12px  0px 12px 20px;
+
+      img {
+        margin-right: 12px;
+      }
+
+      input {
+        width: 83%;
+        border-style: none;
+      }
+
+      input:focus {
+        outline-style: none;
+      }
+    }
+
+    .input-form + .input-form {
+      margin-top: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px 104.5px;
+      background-color: $violet;
+      border-radius: 20px;
+      font-family: $text-font;
+      font-weight: 600;
+      color: $white;
+      margin-top: 30px;
+      border-style: none;
+    }
+
+  }
+}
+
+@media (max-width: 1024px) {
+  .account {
+    .image-side {
+      width: 48%;
+      height: 615px;
+
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+      }
+  }
+    .account-form {
+      width: 48%;
+
+      &__inner {
+        max-width: 325px;
+  
+        h2 {
+          font-size: 2.375rem;
+        }
+  
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .account {
+    &__inner {
+       display: block;
+    width: 100%;
+    margin: 0 auto;
+    }
+  
+   
+    // align-items: center;
+    // justify-content: space-between;
+  }
+}
