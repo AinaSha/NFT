@@ -1,0 +1,175 @@
+@import './vars';
+
+.artist {
+  .banner-background {
+    height: 320px;
+    background-image: url("../assets/img/artist-page-banner.png");   
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .section-wrapper {
+    padding: 0px;
+    position: relative;
+  }
+
+  &__avatar {
+    position: absolute;
+    top: -60px;
+    transform: translate(0px, 0px);
+  }
+
+  &__name-block {
+    padding-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 20px;
+  }
+
+  .copy-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 140%;
+    background-color: $violet;
+    border-radius: 20px;
+    border-style: none;
+    padding: 19px 20px;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 12px;
+    }
+  }
+
+  .follow-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-style: none;
+    border-radius: 20px;
+    outline: 2px solid #A259FF;
+    padding: 19px 30px;
+
+    img {
+      margin-right: 12px;
+    }
+  }
+
+  .rankings-block {
+    display: flex;
+    gap: 80px;
+    margin: 30px 0;
+
+    &__item {
+      h4 {
+        font-family: $digit-font;
+        font-size: 1.75rem;
+      }
+
+      p {
+        font-family: $text-font;
+        font-weight: 400;
+        font-size: 1.375rem;
+        line-height: 160%;
+      }
+      
+    }
+  }
+
+  .artist-descr h5, 
+  .social-media h5 {
+    font-family: $text-font;
+    font-size: 1.375rem;
+    line-height: 160%;
+    color: $grey;
+    margin-bottom: 10px;
+  }
+
+  .page-text {
+    margin: 0px;
+  }
+
+  .social-media {
+    margin: 30px 0 40px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .artist {
+    &__name-block {
+      display: block;
+    }
+
+    .btn-group {
+      margin-top: 30px;
+    }
+
+    .rankings-block {
+      &__item {
+        h4 {
+          font-family: $digit-font;
+          font-size: 1.375rem;
+        }
+  
+        p {
+          font-size: 1rem;
+          line-height: 140%;
+        }
+      }
+    }
+
+    .artist-descr h5, 
+    .social-media h5 {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 140%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .artist {
+    &__avatar {
+      position: absolute;
+      top: -60px;
+      transform: translate( 0px, 0px);
+    }
+
+    &__profile {
+      position: relative;
+      width: 315px;
+      margin: 0 auto;
+    }
+
+    .btn-group {
+      display: block;
+
+      button + button {
+        margin-top: 20px;
+      }
+    }
+
+
+    .copy-btn,
+    .follow-btn {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .rankings-block {
+      gap: 40px;
+    }
+  }
+}
