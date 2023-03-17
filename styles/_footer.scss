@@ -82,12 +82,11 @@
 
 @media (max-width: 475px) {
   .footer {
-    &__form {
+    .form {
       display: block;
-      text-align: center;
 
       .mail-form {
-        width:100%;
+        width: 100%;
         padding: 12px 20px;
         margin-bottom: 16px;
       }
@@ -103,5 +102,6 @@
         padding: 8px 0px;
       } 
     }
+    
   }
 }
