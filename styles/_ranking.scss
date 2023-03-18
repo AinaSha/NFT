@@ -17,13 +17,7 @@
 
     &__tab-btns button {
       width: 25%;
-      background-color: transparent;
-      border-style: none;
-      font-family: $text-font;
-      font-weight: 600;
-      font-size: 1.375rem;
-      color: $grey;
-      padding: 14px 0; 
+      @include tab-btn;
     }
 
     &__tab-btns button.active {
