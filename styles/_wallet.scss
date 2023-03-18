@@ -2,7 +2,7 @@
 
 .connect-wallet {
   &__inner {
-    height: 642px;
+    height: 692px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,7 +50,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .connect-wallet {
     &__inner {
       height: 530px;
@@ -71,7 +71,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .connect-wallet {
     &__inner {
       display: block;
@@ -80,7 +80,7 @@
 
     .image-side {
       width: 100%;
-      height: 615px;
+      height: 232px;
     }
 
     .wallet-descr {
