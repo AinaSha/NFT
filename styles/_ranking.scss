@@ -82,6 +82,14 @@
       margin-top: 20px;
     }
 
+    .artist {
+      transition: .4s ease all;
+    }
+
+    .artist:hover {
+      @include animation;
+    }
+
     .artist a {
       display: flex;
       align-items: center;
@@ -142,7 +150,7 @@
   }
 }
 
-@media (max-width: 834px) {
+@media (max-width: 1279.9px) {
   .rankings {
     .creators-table {
       &__head p:nth-child(2) {
@@ -179,7 +187,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .rankings {
     .top-creators {
       &__tab-btns {
