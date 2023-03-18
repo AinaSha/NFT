@@ -17,3 +17,10 @@ $text-font: 'Work Sans', sans-serif;
   color: $grey;
   padding: 14px 0; 
 }
+
+@mixin animation {
+  -webkit-transform: scale(0.93);
+  -ms-transform: scale(0.93);
+  transform: scale(0.93);
+}
+
