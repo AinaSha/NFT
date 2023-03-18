@@ -1,6 +1,8 @@
 @import './vars';
 
 .artist {
+  width: 100%;
+
   .banner-background {
     height: 320px;
     background-image: url("../assets/img/artist-page-banner.png");   
@@ -11,6 +13,9 @@
 
   .section-wrapper {
     padding: 0px;
+  }
+
+  .artist-data {
     position: relative;
   }
 
@@ -64,6 +69,7 @@
     img {
       margin-right: 12px;
     }
+
   }
 
   .rankings-block {
@@ -103,6 +109,49 @@
   .social-media {
     margin: 30px 0 40px 0;
   }
+
+
+  &__tab-btns {
+    display: flex;
+
+    button {
+      width: 33.3%;
+      @include tab-btn;
+
+      span {
+        font-family: $digit-font;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $white;
+        background-color: $dark-grey;
+        padding: 5px 10px;
+        border-radius: 20px;
+        margin-left: 16px;
+      }
+    }
+
+    button.active {
+      color: $white;
+      border-bottom: 2px solid #858584;
+
+      span.active {
+        background-color: $grey;
+      }
+    }
+  }
+}
+
+.artist-page {
+  .tab-content {
+    background-color: #3B3B3B;
+    padding: 80px 0;
+  }
+
+  .gallery-cards {
+    .user-info-block {
+      background: #2B2B2B;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -135,21 +184,30 @@
       font-weight: 400;
       line-height: 140%;
     }
+
+    &__tab-btns {
+      button {
+        font-size: 1rem;
+
+        span {
+          font-size: 0.75rem;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
   .artist {
+    .artist-data {
+      width: 315px;
+      margin: 0 auto;
+    }
+
     &__avatar {
       position: absolute;
       top: -60px;
-      transform: translate( 0px, 0px);
-    }
-
-    &__profile {
-      position: relative;
-      width: 315px;
-      margin: 0 auto;
+      transform: translate( 93px, 0px);
     }
 
     .btn-group {
@@ -170,6 +228,16 @@
 
     .rankings-block {
       gap: 40px;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .artist {
+    &__tab-btns {
+      button span {
+        display: none;
+      }
     }
   }
 }
