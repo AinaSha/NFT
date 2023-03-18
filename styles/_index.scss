@@ -5,13 +5,11 @@
     display: flex;
     align-self: center;
     column-gap: 30px;
-    width: 89%;
-    margin: 0px auto;
-    padding: 80px 0;
   }
 
-  &__descr {
-    width: 43.22%;
+  &__descr,
+  &__gif {
+    width: 48.6%;
   }
 
   &__title {
@@ -26,18 +24,10 @@
     line-height: 160%;
   }
 
-  &__descr-gif {
-    display: none;
-  }
-
-  &__gif {
-    width: 43.22%;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
-    }
+  &__gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
   }
 
   &__btn {
@@ -49,10 +39,15 @@
     padding: 19px 50px;
     display: flex;
     align-items: center;
+    transition: .4s ease all;
 
     img {
       margin-right: 12px;
     }
+  }
+
+  &__btn:hover {
+    @include animation;
   }
 
   .digit-info {
@@ -73,13 +68,8 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .topscreen  {
-    &__wrapper {
-      column-gap: 40px;
-      width: 94%;
-    }
-  
     &__title {
       font-size: 2.375rem;
       line-height: 120%;
@@ -89,6 +79,16 @@
       font-size: 1rem;
       margin: 20px 0;
       line-height: 140%;
+    }
+    
+    &__gif {
+      height: 330px;
+     
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
     }
 
     .digit-info {
@@ -105,60 +105,37 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .topscreen  {
-    position: relative;
     &__wrapper {
       display: block;
-      width: 100%;
-      margin: 0px auto;
-      padding: 40px 0;
     }
 
     &__descr {
-      width: 70%;
+      width: 100%;
       margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 1.75rem;
+      line-height: 140%;
     }
 
     &__text {
-      margin: 40px 0 40px 0;
+      font-size: 1rem;
+      line-height: 140%;
+      margin-bottom: 395px;
     }
 
-    &__descr-gif {
-      display: block;
-      width: 96%;
-      margin-bottom: 40px;
-      
-      img {
-        width: 100%;
-      }
-    }
+    // &__btn {
+    //   width: 315px;
+    //   margin: 0 auto;
+    // }
 
     &__gif {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: 475px) {
-  .topscreen  {
-    &__wrapper {
-      padding: 40px 0;
-    }
-
-    &__descr {
-      width: 90%;
-      margin: 0 auto;
-    }
-
-    &__descr-gif {
-      display: block;
-      width: 100%;
-      margin-bottom: 40px;
-    }
-
-    &__gif {
-      display: none;
+      width: 315px;
+      position: absolute;
+      top: 295px;
     }
 
     &__btn {
@@ -168,27 +145,33 @@
 
 }
 
+// Collection section
+
 .collection {
+  &__wrapper {
+    padding: 80px 0;
+  }
 
   &__gallery-cards {
-    width: 100%;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     margin-top: 40px;
-    justify-content: space-between;
   }
     
-  .gallery-cards__item {
-    width: 31.4%;
-  }
-
   .image-gallery {
     &__block-1 {
+      transition: .4s ease all;
+
       img {
         width: 100%;
         height: 100%;
         object-fit: fill;
       }
+    }
+
+    &__block-1:hover {
+      @include animation;
     }
 
     &__block-2 {
@@ -200,6 +183,11 @@
 
       &__item {
         width: 30%;
+        transition: .4s ease all;
+      }
+
+      &__item:hover {
+        @include animation;
       }
 
       &__item img {
@@ -214,6 +202,11 @@
         justify-content: center;
         background-color: $violet;
         border-radius: 20px;
+        transition: .4s ease all;
+      }
+
+      &__item3:hover {
+        @include animation;
       }
     }
   }
@@ -223,47 +216,44 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .collection {
+
     &__wrapper {
-      width: 94%;
+      padding: 40px 0;
     }
+
     .gallery-cards__item:last-child {
       display: none;
     }
 
-    .gallery-cards__item {
-      flex-basis: 48%;
+    &__gallery-cards {
+      grid-template-columns: repeat(2, 1fr);
     }
+
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .collection {
-    &__wrapper {
-      width: 100%;
-    }
+
     .gallery-cards__item:nth-child(2) {
       display: none;
     }
 
-    .gallery-cards__item {
-      flex-basis: 330px;
-      margin: 0 auto;
+    &__gallery-cards {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
 
-@media (max-width: 475px) {
-  .collection {
-    &__wrapper {
-      padding: 40px 0;
-    }
-  }
-} 
 
-// creators section
+
+// Creators section
 .creators {
+  &__wrapper {
+    padding-bottom: 80px;
+  }
 
   &__header {
     display: flex;
@@ -273,17 +263,17 @@
   }
 
   &__card-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
   }
 
   .card-item {
-    width: 230px;
+    width: 240px;
     background-color: $dark-grey;
     border-radius: 20px;
     position: relative;
-    margin: 20px 0;
+    transition: .4s ease all;
 
     &__inner {
       text-align: center;
@@ -333,28 +323,28 @@
     }
   }
 
-  .creator-btn2 {
-    display: none;
+  .card-item:hover {
+    @include animation;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .creators {
     &__wrapper {
-      width: 94%;
+      padding-bottom: 40px;
     }
-  }
-}
-
-@media (max-width: 960px) {
-  .creators {
 
     &__text {
       width: 50%;
     }
 
+    &__card-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .card-item {
-      width: 315px;
+      width: 330px;
 
       &__inner {
         display: flex;
@@ -381,29 +371,17 @@
     .card-item:nth-child(12) {
       display: none;
     }
-  }
-}
-
-@media (max-width: 834px) {
-  .creators {
-
-    &__card-gallery {
-      width: 315px;
-      margin: 0 auto;
-    }
 
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .creators {
-    &__wrapper {
-      width: 100%;
-    }
 
     &__header {
       display: block;
       margin: 0 auto;
+      position: relative;
 
       .section-btn {
         margin: 0 auto;
@@ -412,32 +390,34 @@
 
     &__text {
       width: 100%;
+      margin-bottom: 650px;
     }
 
     &__card-gallery {
-      width: 315px;
-      padding: 40px 0;
+      position: absolute;
+      top:1688px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
     }
 
     .card-item {
-      margin: 10px 0;
-    }
-
-    .creator-btn {
-      display: none;
-    }
-
-    .creator-btn2 {
-      display: block;
-      margin: 0 auto;
       width: 315px;
+    }
+
+    .card-item:nth-child(6) {
+      display: none;
     }
   }
 }
 
-// Categories section
 
+// Categories section
 .categories {
+  &__wrapper {
+    padding-bottom: 80px;
+  }
+
   &__gallery-inner {
     display: grid;
     grid-template-columns: repeat(4, 22.89%);
@@ -448,6 +428,7 @@
   .categories-card {
     background: $dark-grey;
     border-radius: 20px;
+    transition: .4s ease all;
 
     &__image-block {
 
@@ -462,10 +443,18 @@
       margin: 20px 30px 25px 30px;
     }
   }
+
+  .categories-card:hover {
+    @include animation;
+  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .categories {
+    &__wrapper {
+      padding-bottom: 40px;
+    }
+
     &__gallery-inner {
       gap: 20px 20px;
     }
@@ -478,8 +467,9 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .categories {
+
     &__gallery-inner {
       display: grid;
       grid-template-columns: repeat(2, 147px);
@@ -497,19 +487,32 @@
   }
 }
 
-//Discover section
 
+//Discover section
 .discover { 
-  &__gallery-cards {
-    width: 100%;
+  &__wrapper {
+    padding-bottom: 80px;
+  }
+  &__header {
     display: flex;
-    align-items: center;
-    margin-top: 40px;
+    align-items: end;
     justify-content: space-between;
   }
 
+  &__gallery-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+
   .gallery-cards__item {
-    width: 31.4%;
+    width: 330px;
+    transition: .4s ease all;
+  }
+  
+  .gallery-cards__item:hover {
+    @include animation;
   }
 
   .image-block {
@@ -521,34 +524,47 @@
       object-fit: fill;
     }
   }
-
-  .discover-btn2 {
-    display: none;
-  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .discover {
     .gallery-cards__item:last-child {
       display: none;
     }
 
-    .gallery-cards__item {
-      width: 48%;
+    &__gallery-cards {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .discover {
-      &__gallery-cards {
-      flex-direction: column;
-      row-gap: 30px;
-      padding: 0px 0 40px 0;
+    &__wrapper {
+      position: relative;
+      padding-bottom: 40px;
     }
 
+    &__header {
+      display: block;
+    }
+
+    &__text {
+      margin-bottom: 1400px;
+    }
+
+    .discover-btn {
+      margin: 0 auto;
+    }
+
+    &__gallery-cards {
+      position: absolute;
+      top: 68px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+      
     .gallery-cards__item {
-      width: 330px;
+      width: 315px;
     }
 
     .gallery-cards__item:last-child {
@@ -565,16 +581,6 @@
       }
     }
 
-    .discover-btn {
-      display: none;
-    }
-
-    .discover-btn2 {
-      display: block;
-      margin: 0 auto;
-      width: 315px;
-    }
-
     .bid {
       &__title,
       &__data {
@@ -584,34 +590,16 @@
   }
 }
 
-// @media (max-width: 575px)  {
-//   .discover {
-//     .gallery-cards__item {
-//       width: 68%;
-//     }
-//   } 
-// }
 
-// @media (max-width: 475px)  {
-//   .discover {
-//     .gallery-cards__item {
-//       width: 80%;
-//     }
-//   } 
-// }
-
-
-
-//Deadline section
-
+//Magic deadline section
 .magic {
   background-image: url('../assets/img/NFT-Highlight.png');
   background-repeat: no-repeat;
   background-position:center center;
   background-size: cover;
-
-  &__inner {
-   margin: 360px 0 60px 0;
+ 
+  &__wrapper {
+    padding: 360px 0 60px 0;
   }
 
   &__user-profile {
@@ -632,12 +620,6 @@
   &__left h2 {
     font-size: 3.188rem;
     margin: 0px 0 30px 0;
-  }
-
-  .section-btn {
-    background-color: $white;
-    border-style: none;
-    color: #2B2B2B;
   }
 
   .deadline {
@@ -665,13 +647,11 @@
     }
   }
 
-  .magic-btn2 {
-    display: none;
-  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .magic {
+    
     &__left h2 {
       font-size: 2.375rem;
       margin: 0px 0 30px 0;
@@ -680,38 +660,47 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .magic {
+    &__wrapper {
+      padding: 120px 0 40px 0;
+    }
+
     &__inner {
       width: 315px;
-       margin: 120px auto 40px auto;
+       margin: 0px auto;
     }
+    
     .magic-descr {
       display: block;
-      
+      position: relative;
+    }
+
+    &__left h2 {
+      margin-bottom: 215px;
     }
 
     &__right {
-      margin-bottom: 30px;
+      position: absolute;
+      top: 116px;
     }
 
     .magic-btn{
-      display: none;
-    }
-
-    .magic-btn2 {
-      display: block;
-      width: 100%;
+      background-color: $white;
+      color: #2B2B2B;
+      outline: none;
     }
   }
 }
 
 
 // Instraction section
-
 .instruction {
+  &__wrapper {
+    padding-bottom: 80px;
+  }
+
   &__gallery {
-    width: 100%;
     display: flex;
     align-items: center;
     margin-top: 40px;
@@ -719,7 +708,7 @@
   }
 
   .card-item {
-    flex-basis: 31.5%;
+    max-width: 330px;
     background-color: #3B3B3B;
     border-radius: 20px;
     padding: 30px;
@@ -751,8 +740,15 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .instruction {
+    &__wrapper {
+      padding-bottom: 40px;
+    }
+
+    .card-item {
+      max-width: 210px;
+    }
     .description {
       h3 {
         font-size: 1rem;
@@ -765,8 +761,12 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .instruction {
+    &__wrapper {
+      padding-bottom: 20px;
+    }
+
     &__gallery {
       display: block;
       width: 315px;
@@ -790,6 +790,7 @@
     }
 
     .card-item {
+      max-width: 315px;
       padding: 20px;
     }
 
@@ -799,10 +800,13 @@
   }
 }
 
-//Call-to action section
 
+//Call-to action section
 .call-to-action {
    position: relative;
+   &__wrapper {
+    padding-bottom: 80px;
+   }
 
   &__inner {
     display: flex;
@@ -864,11 +868,19 @@
         margin-right: 12px;
       }
     }
+
+    // .mail-btn:hover {
+    //   @include animation;
+    // }
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .call-to-action {
+    &__wrapper {
+      padding-bottom: 40px;
+     }
+  
     &__inner {
       justify-content: center;
       column-gap: 30px;
@@ -918,7 +930,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .call-to-action {
     &__inner {
       display: block;
