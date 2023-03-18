@@ -6,6 +6,7 @@
 @import './styles/wallet';
 @import './styles/marketplace';
 @import './styles/ranking';
+@import './styles/artist-page';
 
 *,
 *::before,
@@ -47,10 +48,10 @@ button {
   color: $white;
 }
 
+// Common classes
 .section-wrapper {
-  width: 94%;
-  margin: 0px auto;
-  padding: 80px 0;
+  max-width: 1050px;
+  margin: 80px auto;
 }
 
 .section-title {
@@ -76,10 +77,15 @@ button {
   align-items: center;
   width: 247px;
   height: 60px;
+  transition: .4s ease all;
   
   img {
     margin-right: 12px;
   }
+}
+
+.section-btn:hover {
+ @include animation;
 }
 
 .card-title {
@@ -167,7 +173,11 @@ button {
   margin: 20px 0 40px 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
+  .section-wrapper {
+    max-width: 690px;
+  }
+
   .section-title {
     font-size: 1.75rem;
   }
@@ -185,26 +195,30 @@ button {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .container {
       padding: 0 30px;
   }
 
   .section-wrapper {
-    width: 100%;
-    padding: 40px 0;
+    max-width: 315px;
+    margin: 40px auto;
   }
 
   .section-title,
   .section-desciption {
     text-align: center;
   }
-}
 
-@media (max-width: 475px) {
-  .section-title,
-  .section-desciption {
-    text-align: left;
+  .section-btn {
+    width: 315px;
   }
 }
+
+// @media (max-width: 475px) {
+//   .section-title,
+//   .section-desciption {
+//     text-align: left;
+//   }
+// }
 

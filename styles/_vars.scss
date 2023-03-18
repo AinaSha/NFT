@@ -8,3 +8,19 @@ $light-grey:  #CCCCCC;
 $digit-font: 'Space Mono', monospace;
 $text-font: 'Work Sans', sans-serif;
 
+@mixin tab-btn {
+  background-color: transparent;
+  border-style: none;
+  font-family: $text-font;
+  font-weight: 600;
+  font-size: 1.375rem;
+  color: $grey;
+  padding: 14px 0; 
+}
+
+@mixin animation {
+  -webkit-transform: scale(0.93);
+  -ms-transform: scale(0.93);
+  transform: scale(0.93);
+}
+

@@ -1,6 +1,10 @@
 @import './vars';
 
 .footer {
+  background: #3B3B3B;
+  &__inner {
+    padding: 40px 0;
+  }
   .nav-block {
     display: flex;
     justify-content: space-between;
@@ -63,7 +67,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .footer {
     .nav-block {
       display: block;
@@ -80,7 +84,7 @@
   } 
 }
 
-@media (max-width: 475px) {
+@media (max-width: 833.9px) {
   .footer {
     .form {
       display: block;
