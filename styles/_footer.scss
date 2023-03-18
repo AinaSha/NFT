@@ -69,6 +69,12 @@
 
 @media (max-width: 1279.9px) {
   .footer {
+
+    &__inner {
+      width: 690px;
+      margin: 0 auto;
+    }
+
     .nav-block {
       display: block;
     }
@@ -86,6 +92,10 @@
 
 @media (max-width: 833.9px) {
   .footer {
+    &__inner {
+      width: 315px;
+    }
+
     .form {
       display: block;
 
@@ -105,7 +115,6 @@
         transform: translate(0px, 0px);
         padding: 8px 0px;
       } 
-    }
-    
+    }  
   }
 }
