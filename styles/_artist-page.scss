@@ -2,7 +2,9 @@
 
 .artist {
   width: 100%;
-
+  .artist-page-wrapper {
+    margin: 0px;
+  }
   .banner-background {
     height: 320px;
     background-image: url("../assets/img/artist-page-banner.png");   
@@ -21,8 +23,13 @@
 
   &__avatar {
     position: absolute;
-    top: -60px;
+    top: -70px;
     transform: translate(0px, 0px);
+    transition: .4s ease all;
+  }
+
+  &__avatar:hover {
+    @include animation;
   }
 
   &__name-block {
@@ -48,10 +55,15 @@
     padding: 19px 20px;
     display: flex;
     align-items: center;
+    transition: .4s ease all;
 
     img {
       margin-right: 12px;
     }
+  }
+
+  .copy-btn:hover {
+    @include animation;
   }
 
   .follow-btn {
@@ -65,11 +77,16 @@
     border-radius: 20px;
     outline: 2px solid #A259FF;
     padding: 19px 30px;
+    transition: .4s ease all;
 
     img {
       margin-right: 12px;
     }
 
+  }
+
+  .follow-btn:hover {
+    @include animation;
   }
 
   .rankings-block {
@@ -154,8 +171,13 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .artist {
+    .artist-page-wrapper {
+      width: 690px;
+      margin: 0 auto;
+    }
+
     &__name-block {
       display: block;
     }
@@ -197,17 +219,22 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .artist {
     .artist-data {
       width: 315px;
-      margin: 0 auto;
     }
 
     &__avatar {
       position: absolute;
       top: -60px;
       transform: translate( 93px, 0px);
+    }
+
+    &__tab-btns {
+      button span {
+        display: none;
+      }
     }
 
     .btn-group {
