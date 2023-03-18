@@ -70,7 +70,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279.9px) {
   .account {
     &__inner {
       height: 615px;
@@ -90,7 +90,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 833.9px) {
   .account {
     &__inner {
        display: block;
@@ -99,7 +99,7 @@
 
     .image-side {
       width: 100%;
-      height: 615px;
+      height: 232px;
     }
 
     .account-form {
@@ -109,19 +109,6 @@
       &__inner {
         max-width: 325px;
       }
-    }
-  }
-}
-
-@media (max-width: 475px) {
-  .account {
-    &__inner {
-      height: 747px;
-    }
-    .image-side {
-      width: 100%;
-      height: 247px;
-      background-image: url("../assets/img/account-image-mobile.png");
     }
   }
 }
