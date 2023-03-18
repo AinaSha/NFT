@@ -3,7 +3,6 @@
 .hero {
   .search-form {
     position: relative;
-    margin-bottom: 80px;
 
     &__btn {
       background-color: transparent;
@@ -64,6 +63,14 @@
     .section-wrapper {
       padding: 0px 0px;
     }
+
+    .gallery-cards__item {
+      transition: .4s ease all;
+    }
+
+    .gallery-cards__item:hover {
+      @include animation;
+    }
   }
 
 .tab-content__wrapper {
@@ -84,16 +91,7 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .tab-content__wrapper {
-    .gallery-cards {
-      grid-template-columns: 1fr 1fr;
-    }    
-  } 
-}
-
-
-@media (max-width: 768px) {
+@media (max-width: 1279.9px) {
   .hero {
     .hero-title {
       font-size: 1.75rem;
@@ -103,11 +101,23 @@
       button {
         font-size: 1rem;
       }
-      button span {
-        display: none;
-      }
     }
   }  
+
+  .tab-content__wrapper {
+    .gallery-cards {
+      grid-template-columns: 1fr 1fr;
+    }    
+  } 
+}
+
+
+@media (max-width: 833.9px) {
+  .hero {
+    button span {
+      display: none;
+    }
+  } 
 
   .tab-content__wrapper {
     .gallery-cards {
