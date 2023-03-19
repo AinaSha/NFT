@@ -7,6 +7,7 @@
 @import './styles/marketplace';
 @import './styles/ranking';
 @import './styles/artist-page';
+@import './styles/nft-page';
 
 *,
 *::before,
@@ -169,6 +170,7 @@ button {
 
 .page-text {
   font-family: $text-font;
+  font-weight: 400;
   font-size: 1.375rem;
   margin: 20px 0 40px 0;
 }
