@@ -44,6 +44,11 @@
     img {
       margin-right: 12px;
     }
+
+    a {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__btn:hover {
@@ -260,6 +265,10 @@
     align-items: end;
     justify-content: space-between;
     margin-bottom: 60px;
+  }
+
+  .creator-btn a {
+    display: flex;
   }
 
   &__card-gallery {
